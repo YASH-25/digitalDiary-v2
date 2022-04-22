@@ -48,72 +48,89 @@
   <!-- End Hero Section  -->
 
   <!--Content-->
+  <h2>"By Failing To Prepare, You're Preparing To Fail" DIGITAL DIARY Gives You A Platform To Manage Your Task Effectively And Efficiently So You Can Do It And Track It All On Time!!<br></h2>
 
-  <main class="content">
-    <div class="container-fluid p-0">
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <div class="card flex-fill w-100">
-            <div class="card-header">
-              <h5 class="card-title">Line Chart</h5>
-              <h6 class="card-subtitle text-muted">This line chart shows your daily task you followed.</h6>
-            </div>
-            <div class="card-body">
-              <div class="chart">
-                <canvas id="chartjs-line"></canvas>
-              </div>
-            </div>
+  <div class="charts-container cf">
+	<div class="chart circle" id="circle-1">
+		<h3 class="card-title">Line Chart</h3>
+		<h3 class="card-subtitle text-muted">This line chart shows your daily task you followed.</h3>
+	</div>
+	<div class="card-body">
+		<div class="chart chart-sm">
+			<canvas id="chartjs-line"></canvas>
+		</div>
+	</div>
+
+	<div class="chart circle" id="circle-2">
+		<h3 class="card-title">Bar Chart</h3>
+		<h3 class="card-subtitle text-muted">This bar chart shows your weekly task you followed.</h3>
+	</div>
+	<div class="card-body">
+		<div class="chart chart-sm">
+			<canvas id="chartjs-bar"></canvas>
+		</div>
+	</div>
+
+	<div class="chart circle" id="circle-1">
+		<h3 class="card-title">Doughnut Chart</h3>
+		<h3 class="card-subtitle text-muted">This line chart shows your yearly task you followed.</h3>
+	</div>
+	<div class="card-body">
+		<div class="chart chart-sm">
+			<canvas id="chartjs-doughnut"></canvas>
+		</div>
+	</div>
+	<div class="chart circle" id="circle-2">
+		<h3 class="card-title">Pie Chart</h3>
+		<h3 class="card-subtitle text-muted">This line chart shows your monthly task you followed.</h3>
+	</div>
+	<div class="card-body">
+		<div class="chart chart-sm">
+			<canvas id="chartjs-pie"></canvas>
+		</div>
+	</div>
+  </div>
+  <!-- IRRELEVANT - SOCIAL HTML -->
+  <div class="heartIt">
+	<h2>If you like it - Use it, Heart it, Fork it, Share it!</h2>
+  </div>
+  <!--End Content-->
+
+  <!--Watch-->
+  <section1>
+    <div class="container">
+      <div class="icons">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </div>
+      <div class="time">
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num hour_num">08</span>
+            <span class="text">Hours</span>
           </div>
+          <span class="colon">:</span>
         </div>
-
-        <div class="col-12 col-lg-6">
-          <div class="card">
-            <div class="card-header">
-              <h5 class="card-title">Bar Chart</h5>
-              <h6 class="card-subtitle text-muted">This bar chart shows your weekly task you followed.</h6>
-            </div>
-            <div class="card-body">
-              <div class="chart">
-                <canvas id="chartjs-bar"></canvas>
-              </div>
-            </div>
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num min_num">45</span>
+            <span class="text">Minutes</span>
           </div>
+          <span class="colon">:</span>
         </div>
-
-        <div class="col-12 col-lg-6">
-          <div class="card">
-            <div class="card-header">
-              <h5 class="card-title">Doughnut Chart</h5>
-              <h6 class="card-subtitle text-muted">This line chart shows your yearly task you followed.</h6>
-            </div>
-            <div class="card-body">
-              <div class="chart chart-sm">
-                <canvas id="chartjs-doughnut"></canvas>
-              </div>
-            </div>
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num sec_num">06</span>
+            <span class="text">Seconds</span>
           </div>
-        </div>
-
-        <div class="col-12 col-lg-6">
-          <div class="card">
-            <div class="card-header">
-              <h5 class="card-title">Pie Chart</h5>
-              <h6 class="card-subtitle text-muted">This line chart shows your monthly task you followed.</h6>
-            </div>
-            <div class="card-body">
-              <div class="chart chart-sm">
-                <canvas id="chartjs-pie"></canvas>
-              </div>
-            </div>
-          </div>
+          <span class="am_pm">AM</span>
         </div>
       </div>
-
     </div>
-  </main>
 
+  </section1>
 
-  <!--End Content-->
+  <!--End Watch-->
 
   <!-- Footer -->
   <section id="footer">
@@ -369,6 +386,41 @@
 			});
 		});
 	</script>
+	<script>
+		//Watch
+		let section = document.querySelector("section"),
+		icons = document.querySelector(".icons");
+	  
+		icons.onclick = ()=>{
+		  section.classList.toggle("dark");
+		}
+	  
+		// creating a function and calling it in every seconds
+		setInterval(()=>{
+	  
+		  let date = new Date(),
+		  hour = date.getHours(),
+		  min = date.getMinutes(),
+		  sec = date.getSeconds();
+	  
+		  let d;
+		  d = hour < 12 ? "AM" : "PM"; //if hour is smaller than 12, than its value will be AM else its value will be pm
+		  hour = hour > 12 ? hour - 12 : hour; //if hour value is greater than 12 than 12 will subtracted ( by doing this we will get value till 12 not 13,14 or 24 )
+		  hour = hour == 0 ? hour = 12 : hour; // if hour value is  0 than it value will be 12
+	  
+		  // adding 0 to the front of all the value if they will less than 10
+		  hour = hour < 10 ? "0" + hour : hour;
+		  min = min < 10 ? "0" + min : min;
+		  sec = sec < 10 ? "0" + sec : sec;
+	  
+		  document.querySelector(".hour_num").innerText = hour;
+		  document.querySelector(".min_num").innerText = min;
+		  document.querySelector(".sec_num").innerText = sec;
+		  document.querySelector(".am_pm").innerText = d;
+	  
+		}, 1000); // 1000 milliseconds = 1s
+	  
+		</script>
 </body>
 
 </html>
