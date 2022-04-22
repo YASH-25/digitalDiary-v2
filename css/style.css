@@ -334,108 +334,115 @@ p {
 /* End Chart */
 
 /* Watch */
+#watch{
+	background-image: url("clock.gif");
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
 #section1{
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	background: #F0F8FF;
-	padding: 0 20px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
   }
   #section1.dark{
-	background: #24292D;
+    background: #24292D;
   }
   #section1 .container{
-	display: flex;
-	justify-content: center;
-	height: 220px;
-	max-width: 560px;
-	width: 100%;
-	background: #fff;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 12px;
-	position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    max-width: 100px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    position: relative;
   }
   #section1.dark .container{
-	background: #323840;
+    background: #323840;
+  }
+  .time{
+      display: flex;
   }
   #section1 .container .icons i{
-	position: absolute;
-	right: 17px;
-	top: 17px;
-	height: 30px;
-	width: 30px;
-	background: #24292D;
-	color: #fff;
-	line-height: 30px;
-	border-radius: 50%;
-	font-size: 14px;
-	cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    background: #24292D;
+    color: #fff;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
   }
   #section1.dark .container .icons i{
-	background: #fff;
-	color: #323840;
+    color: #323840;
   }
   .container .icons i.fa-sun{
-	opacity: 0;
-	pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
   }
   #section1.dark .container .icons i.fa-sun{
-	opacity: 1;
-	pointer-events: auto;
-	font-size: 16px;
+    opacity: 1;
+    pointer-events: auto;
+    font-size: 16px;
   }
   #section1 .container .time{
-	display: flex;
+    display: inline-block;
   }
   .container .time .time-colon{
-	display: flex;
-	flex-direction:row ;
-	position: relative;
+    display: inline-block;
+    flex-direction:row ;
+    position: relative;
   }
   .time .time-colon .am_pm{
-	position: absolute;
-	top: 0;
-	right: -50px;
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 1px;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
   }
   #section1.dark .time .time-colon .am_pm{
-	color: #fff;
+    color: #fff;
   }
   .time .time-colon .time-text{
-	height: 100px;
-	width: 100px;
-	display: flex;
-	flex-direction: column;
-	background: #F0F8FF;
-	border-radius: 6px;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    height: 90px;
+    width: 100px;
+    display: inline-block;
+    flex-direction: column;
+    background: #F0F8FF;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
   #section1.dark .time .time-colon .time-text{
-	background: #24292D;
+    background: #24292D;
   }
   .time .time-colon .time-text,
   .time .time-colon .colon{
-	font-size: 35px;
-	font-weight: 600;
+    font-size: 35px;
+    font-weight: 600;
   }
   #section1.dark .time .time-text .num,
   #section1.dark .time .colon{
-	color: #fff;
+    color: #fff;
   }
   .time .time-colon .colon{
-	font-size: 40px;
-	margin: 0 10px;
+    font-size: 40px;
+    margin: 0 10px;
   }
   .time .time-colon .time-text .text{
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
   }
   #section1.dark  .time .time-colon .text{
-	color: #fff;
+    color: #fff;
   }
 
 /* End Watch */
