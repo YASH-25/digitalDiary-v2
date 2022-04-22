@@ -201,7 +201,7 @@ p {
 
 /* Home Section */
 #home {
-	background-image: url("img1.jpg");
+	background-image: url("task.gif");
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -267,55 +267,178 @@ p {
 /* End Hero Section */
 
 /* Chart */
-
-@media (-ms-high-contrast:none) {
-
-    .card-img,
-    .card-img-bottom,
-    .card-img-top {
-        height: 100%
-    }
-}
-
-
-.chart {
-    margin: auto;
-    min-height: 300px;
-    position: relative;
-    width: 100%;
-}
-
-.chart-xs {
-    min-height: 200px
-}
-
-.chart-sm {
-    min-height: 252px
-}
-
-.chart-lg {
-    min-height: 350px
-}
-
-.chart-xl {
-    min-height: 500px
-}
-
-.chart canvas {
-    max-width: 100%
-}
-
-.content {
-    direction: ltr;
-    flex: 1;
-    max-width: 100vw;
-    padding: 1.5rem 1.5rem .75rem;
-    width: 100vw
-}
-
-
+@font-face {
+	font-family: Lato;
+	src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/176026/ProximaNova-Regular.otf);
+	font-weight: 300;
+  }
+  
+  h2 {
+	font-size: 28px;
+	line-height: 40px;
+	margin-top: 20px;
+  }
+  h2 a {
+	text-decoration: none;
+	color: #48c15e;
+  }
+  h2 p {
+	font-size: 22px;
+  }
+  
+  body {
+	background-color: white;
+	color: rgb(15, 11, 11);
+	text-align: center;
+  }
+  
+  .charts-container {
+	padding: 40px;
+	width: 100%;
+	max-width: 1024px;
+	display: inline-block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  
+  .chart {
+	color: #ffffff;
+	text-align: left;
+	position: relative;
+	height: auto;
+	background-color: #1e2730;
+	display: inline-block;
+	float: left;
+	position: relative;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 10px;
+	padding: 15px 20px 65px 20px;
+  }
+  .chart.circle {
+	padding: 15px 20px 40px 20px;
+  }
+  @media screen and (max-width: 700px) {
+	.chart {
+	  width: calc(100% - 20px);
+	}
+  }
+  @media screen and (min-width: 700px) {
+	.chart {
+	  width: calc(50% - 20px);
+	}
+  }
 
 /* End Chart */
+
+/* Watch */
+#section1{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background: #F0F8FF;
+	padding: 0 20px;
+  }
+  #section1.dark{
+	background: #24292D;
+  }
+  #section1 .container{
+	display: flex;
+	justify-content: center;
+	height: 220px;
+	max-width: 560px;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 12px;
+	position: relative;
+  }
+  #section1.dark .container{
+	background: #323840;
+  }
+  #section1 .container .icons i{
+	position: absolute;
+	right: 17px;
+	top: 17px;
+	height: 30px;
+	width: 30px;
+	background: #24292D;
+	color: #fff;
+	line-height: 30px;
+	border-radius: 50%;
+	font-size: 14px;
+	cursor: pointer;
+  }
+  #section1.dark .container .icons i{
+	background: #fff;
+	color: #323840;
+  }
+  .container .icons i.fa-sun{
+	opacity: 0;
+	pointer-events: none;
+  }
+  #section1.dark .container .icons i.fa-sun{
+	opacity: 1;
+	pointer-events: auto;
+	font-size: 16px;
+  }
+  #section1 .container .time{
+	display: flex;
+  }
+  .container .time .time-colon{
+	display: flex;
+	flex-direction:row ;
+	position: relative;
+  }
+  .time .time-colon .am_pm{
+	position: absolute;
+	top: 0;
+	right: -50px;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+  }
+  #section1.dark .time .time-colon .am_pm{
+	color: #fff;
+  }
+  .time .time-colon .time-text{
+	height: 100px;
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	background: #F0F8FF;
+	border-radius: 6px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  #section1.dark .time .time-colon .time-text{
+	background: #24292D;
+  }
+  .time .time-colon .time-text,
+  .time .time-colon .colon{
+	font-size: 35px;
+	font-weight: 600;
+  }
+  #section1.dark .time .time-text .num,
+  #section1.dark .time .colon{
+	color: #fff;
+  }
+  .time .time-colon .colon{
+	font-size: 40px;
+	margin: 0 10px;
+  }
+  .time .time-colon .time-text .text{
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 2px;
+  }
+  #section1.dark  .time .time-colon .text{
+	color: #fff;
+  }
+
+/* End Watch */
 
 /* Footer */
 #footer {
